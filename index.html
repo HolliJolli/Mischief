@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mischief</title>
+  </head>
+  <body>
+    <header>
+      <h1>Yippeee</h1>
+    </header>
+
+    <div id="responses"></div>
+
+    <script>
+      const style = document.createElement("style");
+      style.innerHTML = `
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+            .response-box {
+                margin: 20px;
+                padding: 10px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                width: 300px;
+                color: white;
+                font-size: 1.2em;
+            }
+            .holly {
+                background-color: pink;
+            }
+            .isaac {
+                background-color: lightblue;
+            }
+            footer {
+                text-align: center;
+                margin-top: 20px;
+                padding: 10px;
+                background-color: #333;
+                color: white;
+            }
+        `;
+
+      document.head.appendChild(style);
+
+      function createResponseBoxes() {
+        const responsesDiv = document.getElementById("responses");
+
+        const hollyBox = document.createElement("div");
+        hollyBox.className = "response-box holly";
+        hollyBox.innerHTML =
+          "<strong>Holly Goodwill</strong><br>This is a response from Holly! 😎";
+        responsesDiv.appendChild(hollyBox);
+
+        const isaacBox = document.createElement("div");
+        isaacBox.className = "response-box isaac";
+        isaacBox.innerHTML =
+          "<strong>Isaac Trost</strong><br>This is a response from Isaac! 😎";
+        responsesDiv.appendChild(isaacBox);
+      }
+
+      createResponseBoxes();
+    </script>
+  </body>
+</html>
